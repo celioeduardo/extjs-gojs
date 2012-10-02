@@ -1,4 +1,4 @@
-# Drag and Drop ExtJS with GoJS integration
+# Drag and Drop ExtJS with GoJS
 
 ![Screen 1](http://github.com/celioeduardo/extjs-gojs/raw/master/screen1.jpg)
 ![Screen 2](http://github.com/celioeduardo/extjs-gojs/raw/master/screen2.jpg)
