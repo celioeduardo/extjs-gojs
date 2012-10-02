@@ -56,7 +56,7 @@ Ext.define('Ux.gojs.CanvasGojs', {
     	var me = this,
     		part = me.getPartByEvent(me.diagram, e);
     	if (part && part.mouseDragEnter)
-    		if (part.mouseDragEnter(e,ddSource, data, part, me))
+    		if (part.mouseDragEnter(e,ddSource, data, part))
     			return Ext.dd.DropZone.prototype.dropAllowed;
     		else
     			return Ext.dd.DropZone.prototype.dropNotAllowed;
@@ -68,7 +68,7 @@ Ext.define('Ux.gojs.CanvasGojs', {
     	var me = this,
     		part = me.getPartByEvent(me.diagram, e);
     	if (part && part.mouseDrop)
-    		return part.mouseDrop(e,ddSource, data, part, me);
+    		return part.mouseDrop(e,ddSource, data, part);
     	else
     		return false;
     },

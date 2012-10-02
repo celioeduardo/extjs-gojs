@@ -160,6 +160,8 @@ Ext.onReady(function(){
 	    build: function($, diagram){
 	    	//$ "protected" by scope method. Avoiding problems with other libraries
 	    	
+            var me = this;
+
 	    	diagram.linkTemplateMap.add("",
 				$(go.Link,
 					{layerName:"Background",
@@ -167,9 +169,9 @@ Ext.onReady(function(){
 						//Could be done some validation
 						return true;
 					},
-					mouseDrop: function(e, ddSource, data, link, canvasExt){
+					mouseDrop: function(e, ddSource, data, link){
 						//Delegating through event
-						return canvasExt.fireEvent('droppedOnLink',data,link);
+						return me.fireEvent('droppedOnLink',data,link);
 					}},
 					$(go.Shape,{strokeWidth: 5 }),
 					$(go.Shape, { toArrow: "Standard", strokeWidth: 5 })));
@@ -191,8 +193,8 @@ Ext.onReady(function(){
 						//Could be done some validation
 						return true;
 					},
-					mouseDrop: function(e, ddSource, data, node, canvasExt){
-						return canvasExt.fireEvent('droppedOnNodeB',data,node);
+					mouseDrop: function(e, ddSource, data, node){
+						return me.fireEvent('droppedOnNodeB',data,node);
 					}},
 					$(go.Shape,
 						{figure: "RoundedRectangle", fill: "lightgreen" },
